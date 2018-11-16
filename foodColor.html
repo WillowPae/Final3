@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Quizzes</title>
+  <link rel="stylesheet" href="wpStyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <script>
+
+// First declare the variable as the three images
+// Then once clicked it will go through the for loop, first setting i=0, but because 0 is already smaller then the variable, it will change the border color right away.
+  function changeBorder1(){
+     var imgElement = document.getElementsByClassName("quizimg1");
+     for (var i=0; i< imgElement.length; i++){
+       imgElement[i].style.borderColor = "grey";
+  }
+}
+
+  function changeBorder2(){
+     var imgElement = document.getElementsByClassName("quizimg2");
+     for (var i=0; i< imgElement.length; i++){
+       imgElement[i].style.borderColor = "grey";
+  }
+}
+function changeBorder3(){
+   var imgElement = document.getElementsByClassName("quizimg3");
+   for (var i=0; i< imgElement.length; i++){
+     imgElement[i].style.borderColor = "grey";
+}
+}
+function changeBorder4(){
+   var imgElement = document.getElementsByClassName("quizimg4");
+   for (var i=0; i< imgElement.length; i++){
+     imgElement[i].style.borderColor = "grey";
+}
+}
+// Set variable colors with options for the
+// gets the element of my color and sets the inner html to a random varable in the array colors.
+// math floor means it will be an integer and will generate a random number within the length of the array
+function random_item(){
+  var colors = [ "pink", "blue", "black", "white", "purple", "green", "yellow", "orange","red"];
+  document.getElementById("myColor").innerHTML= colors[Math.floor(Math.random()*colors.length)];
+}
+</script>
+</head>
+<body>
+    <header>
+      <nav>
+        <ul>
+          <li> <h1 class= "homepage">AndoverFeed </h1> </li>
+          <li> <a href="news.html"> News </a> </li>
+          <li> <a href="quizzes.html"> Quizzes </a> </li>
+          <li> <a href="reviews.html"> Reviews </a> </li>
+          <li> <i class="far fa-laugh-squint"></i> </li>
+          <li> <i class="far fa-grin-stars"></i> </li>
+          <li> <i class="far fa-sad-cry"></i> </li>
+        </ul>
+      </nav>
+    </header>
+<main>
+  <h1 class="quizFormat"> We'll Guess Your Favorite Color Based on Your Food Preferences </h1>
+  <div class="questionFormat"><h2> Pick a Breakfast</h2>
+    <img onclick= "changeBorder1()" class= "quizimg1" alt= "Acai Bowl" src="acaibowl.jpeg"> <img onclick= "changeBorder1()" class= "quizimg1" alt="Avocado Toast" src= "avocadotoast.jpg"> <img onclick= "changeBorder1()" class= "quizimg1" alt="Waffles" src= "waffle.jpg">
+  </div>
+  <div class="questionFormat">
+  <h2> Pick a Lunch</h2>
+    <img onclick= "changeBorder2()" class= "quizimg2" alt= "Salad" src="salad.jpeg"> <img onclick= "changeBorder2()" class= "quizimg2" alt="Sandwhich" src= "Sandwhich.jpeg"> <img onclick= "changeBorder2()" class= "quizimg2" alt="Salmon" src= "Salmon.jpeg">
+  </div>
+  <div class="questionFormat">
+  <h2> Pick a Dinner</h2>
+  <img onclick= "changeBorder3()" class= "quizimg3" alt= "Sushi" src="Sushi.jpeg"> <img onclick= "changeBorder3()" class= "quizimg3" alt="Pizza" src= "Pizza.jpg"> <img onclick= "changeBorder3()" class= "quizimg3" alt="Pasta" src= "Pasta.jpeg">
+  </div>
+  <div class="questionFormat">
+  <h2> Pick a Night Snack</h2>
+  <img onclick= "changeBorder4()" class= "quizimg4" alt= "Popcorn" src="Popcorn.jpeg"> <img onclick= "changeBorder4()" class= "quizimg4" alt="Chocolate" src= "Chocolate.jpeg"> <img onclick= "changeBorder4()" class= "quizimg4" alt="Chips" src= "Chips.jpeg">
+  </div>
+  <div>
+    <h2> Your Favorite Color is <button onclick="random_item()" id="myColor"> click here!</button> </h2>
+  </div>
+</main>
